@@ -16,15 +16,69 @@
 <body>
     <div class="container">
         <div class="jumbotron">
-            <h1>Crytal Collector</h1> 
-            <h3>gotta collect them all!</h3>
+            <h1>Crytal Collector!</h1> 
+            <h6>gotta collect them all!</h6>
         </div>
     </div>
+
 <!-- instructions div -->
-    <div></div>
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4>Instructions</h4>
+    </div>
+    <div class="panel-body">
+        <p>You will be givne a random number at the start of the game</p>
+        <br>
+        <p>There are four crystals below. By clockin on a crsytal you will add a specific amount of points
+            to you total score.
+        </p>
+        <br>
+        <p>You win the game by matching your total score to random number, you lose the game if your total score goes
+            above the random number.
+        </p>
+        <br>
+        <p>The value of each crystal is hidden from you until you click it.</p>
+        <br>
+        <p>Each time whe the game started, the game will change the values of each crystal.</p>
+    </div>
+</div>
 
 <!-- score div-->
+ <div class="container">
+    <div class="row panel panel-default">
+        <div class="col-sm-4">
+            <span id="randomNumber">36</span>
+        </div>
+        <div class="col-sm-2">
+            Win: <span id="winCounter"></span>
+            <br>
+            Losses: <span id="lossCouter"></span>
+        </div>
+    </div>
+</div>
 
 <!-- crystal div -->
 
+<div class="container">
+    <div class="row">
+        <div class="col-sm-2">ruby</div>
+        <div class="col-sm-2 diamond">diamond</div>
+        <div class="col-sm-2 topaz">topaz</div>
+        <div class="col-sm-2 emerald">emerald</div>
+    </div>
+</div>
 <!-- score div -->
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4>Your total score</h4>
+    </div>
+    <div class="panel-body"><span id=score></span></div>
+</div>
+
+</div>
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+</html>
