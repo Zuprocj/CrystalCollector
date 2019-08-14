@@ -1,55 +1,66 @@
-var userTotal= 0;
+// global variables
 var wins = 0;
 var losses = 0;
-var random = Math.floor(Math.random()*102+19);
 
-var ruby = Math.floor(Math.random()*12+1);
-var diamond = Math.floor(Math.random()*12+1);
-var topaz = Math.floor(Math.random()*12+1);
-var emerald = Math.floor(Math.random()*12+1);
+var crystal = {
+   ruby:
+   { 
+      value: 0 
+   },
+   diamond:
+   { 
+      value: 0
+   },
+   topaz:
+   { 
+      value: 0
+   },
+   emerald:
+   { 
+      value: 0
+   }
+};
 
-$("#randomNumber").text(random);
-$("#winCounter").text(wins);
-$("#lossCounter").text(losses);
+var score = 0;
+var target = 0;
 
-function startGame() {
-    random = Math.floor(Math.random()*102+19);
-    console.log(random);
-    $("#randomNumber").text(random);
-    var ruby = Math.floor(Math.random()*12+1);
-    var diamond = Math.floor(Math.random()*12+1);
-    var topaz = Math.floor(Math.random()*12+1);
-    var emerald = Math.floor(Math.random()*12+1);
-    userTotal = 0;
-    $("#score").text(userTotal);
+var winCount = 0;
+var lossCount = 0;
+
+var getRandom = function(min, max) {
+   return Math.floor(Math.random() * (120 - 19 + 1)) + 1;
 }
 
-function winner() {
-    alert("You Won!!");
-    wins++;
-    $("#winCounter").text(wins);
-    reset();
+var startGame = function() {
+   var score = 0;
+   target = getRandom(19, 120);
+   crystal.ruby.value = getRandom(1, 12);
+   crystal.diamond.value = getRandom(1, 12);
+   crystal.topaz.value = getRandom(1, 12);
+   crystal.emerald.value = getRandom(1, 12);
+   $("#score").html(score);
+   $("#target").html(target);
 }
 
-function loser() {
-    alert("You Lose!!");
-    losses++;
-    $("#lossCounter").text(losses);
-    reset();
+var addValues = function(crystal) {
+   score = score + crystal.value;
 }
 
-startGame();
 
-$("#image1").on("click", function() {
-    userTotal = userTotal + num1;
-    console.log("New userTotal " + userTotal);
-    $("#score").text(userTotal);
+startGame ();
 
-    if (userTotal === random) {
-        winner()
-    }
+$("#ruby").click(function() {
+   addValues(crystal.ruby);
+});
 
-    else if (userTotal > random) {
-        loser()
-    } 
-})
+$("#diamond").click(function() {
+   addValues(crystal.diamond);
+});
+
+$("#topaz").click(function() {
+   addValues(crystal.topaz);
+});
+
+$("#emerald").click(function() {
+   addValues(crystal.emerald);
+});
