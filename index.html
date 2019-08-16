@@ -1,18 +1,15 @@
 <!doctype html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
     <title>Unit 4 Game</title>
     <link rel="stylesheet" href="assets/css/reset.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
 </head>
-
 <body>
     <div class="container">
         <div class="jumbotron">
@@ -20,45 +17,28 @@
             <h6>gotta collect them all!</h6>
         </div>
     </div>
-
-<!-- instructions div -->
 <div class="panel panel-default">
-    <div class="panel-heading">
-        <h4>Instructions</h4>
-    </div>
-    <div class="panel-body">
-        <p>You will be givne a random number at the start of the game</p>
-        <br>
-        <p>There are four crystals below. By clockin on a crsytal you will add a specific amount of points
-            to you total score.
-        </p>
-        <br>
-        <p>You win the game by matching your total score to random number, you lose the game if your total score goes
-            above the random number.
-        </p>
-        <br>
-        <p>The value of each crystal is hidden from you until you click it.</p>
-        <br>
+    <div class="panel-body"></div>
+        <h2>Instructions</h2><br>
+        <p>You will be given a random number at the start of the game.</p><br>
+        <p>There are four crystals below. By clicking on a crsytal you will add a specific amount of points to your total score.</p><br>
+        <p>You win the game by matching your total score to random number, you lose the game if your total score goes above the random number.</p><br>
+        <p>The value of each crystal is hidden from you until you click it.</p><br>
         <p>Each time whe the game started, the game will change the values of each crystal.</p>
     </div>
 </div>
-
-<!-- score div-->
  <div class="container">
     <div class="row panel panel-default">
-        <div class="col-sm-4">
+        <div class="col-sm-5">
             <span id="target"></span>
         </div>
-        <div class="col-sm-2">
-            Win: <span id="winCounter"></span>
+        <div class="col-sm-3">
+            <h3>Win:</h3> <span id="winCounter"></span>
             <br>
-            Losses: <span id="lossCouter"></span>
+            <h3>Losses:</h3><span id="lossCounter"></span><br>
         </div>
     </div>
 </div>
-
-<!-- crystal div -->
-
 <div class="container" id="buttons">
     <div class="row">
         <div class="col-sm-2 ruby">
@@ -75,18 +55,14 @@
         </div>
     </div>
 </div>
-<!-- score div -->
-
 <div class="panel panel-default">
-    <div class="panel-heading">
-        <h4>Your total score</h4>
+    <div class="panel-body">
+    <h2>Your total score</h2><br>
+    <span id=score></span>
     </div>
-    <div class="panel-body"><span id=score></span></div>
 </div>
 
-</div>
 </body>
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script type="text/javascript" src="assets/javascript/game.js"></script>
 </html>
