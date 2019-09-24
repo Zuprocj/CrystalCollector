@@ -6,6 +6,7 @@ body {
     background: url("../image/dark-honeycomb.png");
     max-width: 960px;
 }
+
 img {
     width:150px;
     height:150px;
@@ -19,6 +20,10 @@ span {
 }
 * {
     box-sizing: border-box;
+}
+#scoreBoard {
+    font-size: 52px;
+    text-align: center;
 }
 .panel {
     background:hsl(300,100%,25%,0.3);
