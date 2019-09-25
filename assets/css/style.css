@@ -5,6 +5,7 @@ body {
     color: lightgreen;
     background: url("../image/dark-honeycomb.png");
     max-width: 960px;
+    padding: 20px;
 }
 
 img {
@@ -36,7 +37,7 @@ span {
     font-stretch: semi-expanded;
 }
 .container {
-    width: 100%;
+    width: 960px;
     margin: 0 auto;
     clear: both;
 }
